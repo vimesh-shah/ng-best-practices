@@ -7,7 +7,7 @@
 	  <li #navlink><a href="#">About</a></li>
 	  <li #navlink><a href="#">Contact</a></li>
   </ul>
-  <div class="burger" (click)="burgerClicked()">
+  <div class="burger" [class.toggle]="isNavActive" (click)="burgerClicked()">
     <div class="line1"></div>
 	  <div class="line2"></div>
     <div class="line3"></div>

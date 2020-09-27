@@ -16,9 +16,15 @@ export class NavComponent implements OnInit {
 
   burgerClicked() {
     this.isNavActive = !this.isNavActive;
-    this.navlinks.toArray().forEach((link, index) => {
-      link.nativeElement.style.animation =
-        "navLinkFade 0.5s ease forwards " + (index / 7 + 0.3) + "s";
+    let data = this.navlinks.toArray();
+
+    data.forEach((link, index) => {
+      if (this.isNavActive == true) {
+        link.nativeElement.style.animation =
+          "navLinkfade 0.5s ease forwards " + (index / data.length + 0.2) + "s";
+      } else {
+        link.nativeElement.style.animation = "";
+      }
     });
   }
 }
