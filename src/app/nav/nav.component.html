@@ -2,12 +2,12 @@
   <div class="nav-title">
     <h3>Ng-EMS</h3>
   </div>
-  <ul class="nav-links">
-    <li><a href="#">Home</a></li>
-	  <li><a href="#">About</a></li>
-	  <li><a href="#">Contact</a></li>
+  <ul class="nav-links" [class.nav-active]="isNavActive">
+    <li #navlink><a href="#">Home</a></li>
+	  <li #navlink><a href="#">About</a></li>
+	  <li #navlink><a href="#">Contact</a></li>
   </ul>
-  <div class="burger">
+  <div class="burger" (click)="burgerClicked()">
     <div class="line1"></div>
 	  <div class="line2"></div>
     <div class="line3"></div>
